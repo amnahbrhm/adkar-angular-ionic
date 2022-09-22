@@ -1,0 +1,7 @@
+{
+  "name": "adkar",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
