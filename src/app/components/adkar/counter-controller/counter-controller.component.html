@@ -1,9 +1,9 @@
 <ion-row size="10">
-    <ion-text class="ion-text-center">
-        {{count}}
+    <ion-text class="ion-text-center" (click)="decrease()">
+        {{counter}}
     </ion-text>
 </ion-row>
 <ion-row class="counter-bottom">
-    <ion-icon name="refresh-outline"></ion-icon>
+    <ion-icon (click)="reset()" name="refresh-outline"></ion-icon>
     <ion-text>{{count}}</ion-text>
 </ion-row>
