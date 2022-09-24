@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { MorningAdkarComponent } from './morning-adkar.component';
+import { AdkarComponent } from './adkar.component';
 
-describe('MorningAdkarComponent', () => {
-  let component: MorningAdkarComponent;
-  let fixture: ComponentFixture<MorningAdkarComponent>;
+describe('AdkarComponent', () => {
+  let component: AdkarComponent;
+  let fixture: ComponentFixture<AdkarComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MorningAdkarComponent ],
+      declarations: [ AdkarComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MorningAdkarComponent);
+    fixture = TestBed.createComponent(AdkarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

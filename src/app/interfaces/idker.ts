@@ -5,6 +5,6 @@ export interface Idker {
   type: DkerType[];
 }
 export enum DkerType {
-  morning,
-  evening
+  morning = 'morning',
+  evening = 'evening'
 }
