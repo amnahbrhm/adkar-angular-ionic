@@ -10,8 +10,9 @@ import { MenuComponent } from './components/menu/menu.component';
 import { EveningAdkarComponent } from './components/adkar/evening-adkar/evening-adkar.component';
 import { MorningAdkarComponent } from './components/adkar/morning-adkar/morning-adkar.component';
 import { CounterControllerComponent } from './components/adkar/counter-controller/counter-controller.component';
+import { AdkarComponent } from './components/adkar/adkar.component';
 @NgModule({
-  declarations: [AppComponent,MenuComponent,EveningAdkarComponent,MorningAdkarComponent,CounterControllerComponent],
+  declarations: [AppComponent,MenuComponent,EveningAdkarComponent,MorningAdkarComponent,CounterControllerComponent,AdkarComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
