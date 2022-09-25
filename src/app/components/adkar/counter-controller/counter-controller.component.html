@@ -1,9 +1,11 @@
-<ion-row size="10">
-    <ion-text class="ion-text-center" (click)="decrease()">
-        {{counter}}
-    </ion-text>
-</ion-row>
-<ion-row class="counter-bottom">
-    <ion-icon (click)="reset()" name="refresh-outline"></ion-icon>
-    <ion-text>{{count}}</ion-text>
-</ion-row>
+<div [classList]="(counter===0)?'counter bg-secondary':'counter'">
+    <ion-row size="10" class="counter-number" (click)="decrease()">
+        <ion-text class="ion-text-center">
+            {{counter}}
+        </ion-text>
+    </ion-row>
+    <ion-row class="counter-bottom">
+        <ion-icon (click)="reset()" name="refresh-outline"></ion-icon>
+        <ion-text>{{count}}</ion-text>
+    </ion-row>
+</div>

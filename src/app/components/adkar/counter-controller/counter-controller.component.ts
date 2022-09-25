@@ -11,7 +11,6 @@ export class CounterControllerComponent implements OnInit, OnDestroy {
   @Input() count: number;
   counter = 0;
   subscribtion!: Subscription;
-
   constructor(private adkarService: AdkarService) {
     this.subscribtion = this.adkarService.currentAdkarTypeChange.subscribe(() => {
       this.reset();

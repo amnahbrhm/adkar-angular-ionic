@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-    <ion-toolbar class="header">
+    <ion-toolbar color="secondary">
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
@@ -17,7 +17,7 @@
                 </ion-label>
                 <p class="info" *ngIf="dker.info">{{dker.info}}</p>
             </ion-col>
-            <ion-col size="3" class="counter" color="secondary">
+            <ion-col size="3" class="counter-section">
                 <app-counter-controller [count]="dker.count"></app-counter-controller>
             </ion-col>
         </ion-item>
