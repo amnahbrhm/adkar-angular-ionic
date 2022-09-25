@@ -33,7 +33,8 @@ export class AdkarComponent implements OnInit {
     });
   }
   handleWrongNavigation() {
-    this.router.navigate(['adkar'], { queryParams: { type: 'morning' } },
+    this.adkarType = this.adkarService.getCurrentAdkarType();
+    this.router.navigate(['adkar'], { queryParams: { type: this.adkarType } },
     );
   }
 }

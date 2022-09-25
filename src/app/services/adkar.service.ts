@@ -30,10 +30,21 @@ export class AdkarService {
   public currentAdkarTypeChange: BehaviorSubject<DkerType> = new BehaviorSubject<DkerType>(this.currentAdkarType);
 
   constructor() {
-    //TODO change DkerType as what the time is now
-   }
+    this.setTypeOnTime();
+  }
+  setTypeOnTime(): void {
+    const date = new Date();
+    if (date.getHours() < 13) {
+      this.setCurrentAdkarType(DkerType.morning);
+    } else {
+      this.setCurrentAdkarType(DkerType.evening);
+    }
+  }
   setCurrentAdkarType(type: DkerType) {
     this.currentAdkarTypeChange.next(type);
+  }
+  getCurrentAdkarType(): DkerType {
+    return this.currentAdkarType;
   }
   getAdkar(type: DkerType): Idker[] {
     return this.adker.filter((dker) => dker.type.includes(type));
