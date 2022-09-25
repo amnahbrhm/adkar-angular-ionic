@@ -1,8 +1,10 @@
 export interface Idker {
   text: string;
   count: number;
-  info?: string;
   type: DkerType[];
+  info?: string;
+  prefix?: string;
+  suffix?: string;
 }
 export enum DkerType {
   morning = 'morning',

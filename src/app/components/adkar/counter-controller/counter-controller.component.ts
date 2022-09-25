@@ -9,6 +9,7 @@ import { AdkarService } from 'src/app/services/adkar.service';
 })
 export class CounterControllerComponent implements OnInit, OnDestroy {
   @Input() count: number;
+  @Input() id: number;
   counter = 0;
   subscribtion!: Subscription;
   constructor(private adkarService: AdkarService) {

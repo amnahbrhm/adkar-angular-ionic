@@ -9,7 +9,7 @@
     </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
-    <ion-list lines="inset" *ngFor="let dker of adkar">
+    <ion-list lines="inset" *ngFor="let dker of adkar; let i = index">
         <ion-item>
             <ion-col size="9" class="ion-text-right">
                 <ion-label class="ion-text-wrap">
@@ -18,9 +18,8 @@
                 <p class="info" *ngIf="dker.info">{{dker.info}}</p>
             </ion-col>
             <ion-col size="3" class="counter-section">
-                <app-counter-controller [count]="dker.count"></app-counter-controller>
+                <app-counter-controller [id]="i" [count]="dker.count"></app-counter-controller>
             </ion-col>
         </ion-item>
-
     </ion-list>
 </ion-content>
