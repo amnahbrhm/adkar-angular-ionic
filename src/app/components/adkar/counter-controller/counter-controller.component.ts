@@ -1,14 +1,21 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { AdkarService } from 'src/app/services/adkar.service';
 
 @Component({
   selector: 'app-counter-controller',
   templateUrl: './counter-controller.component.html',
   styleUrls: ['./counter-controller.component.scss', '../adkar.component.scss'],
 })
-export class CounterControllerComponent implements OnInit {
+export class CounterControllerComponent implements OnInit, OnDestroy {
   @Input() count: number;
   counter = 0;
-  constructor() {
+  subscribtion!: Subscription;
+
+  constructor(private adkarService: AdkarService) {
+    this.subscribtion = this.adkarService.currentAdkarTypeChange.subscribe(() => {
+      this.reset();
+    });
   }
   ngOnInit() {
     this.reset();
@@ -22,5 +29,7 @@ export class CounterControllerComponent implements OnInit {
     this.counter = this.count;
   }
 
-
+  ngOnDestroy(): void {
+    this.subscribtion.unsubscribe();
+  }
 }

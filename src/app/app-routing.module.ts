@@ -3,10 +3,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AdkarComponent } from './components/adkar/adkar.component';
 
 const routes: Routes = [
-  { path: '**', redirectTo: 'adkar/morning', pathMatch: 'full' },
+  { path: '**', redirectTo: 'adkar?type=morning', pathMatch: 'full' },
 
   {
-    path: 'adkar/:id',
+    path: 'adkar',
     component: AdkarComponent
   },
 

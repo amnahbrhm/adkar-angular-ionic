@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   public appPages = [
-    { title: 'اذكار الصباح', url: '/adkar/morning', icon: 'partly-sunny' },
-    { title: 'اذكار المساء', url: '/adkar/evening', icon: 'moon' },
+    { title: 'اذكار الصباح', queryParams: { type: 'morning'}, icon: 'partly-sunny' },
+    { title: 'اذكار المساء', queryParams: { type: 'evening'}, icon: 'moon' },
 
   ];
   constructor() { }

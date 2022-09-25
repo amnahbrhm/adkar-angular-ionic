@@ -7,7 +7,7 @@
     </ion-header>
     <ion-content>
         <ion-menu-toggle class="ion-padding-top" auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item routerDirection="root" [routerLink]="'adkar'" [queryParams]="p.queryParams" lines="none" detail="false" routerLinkActive="selected">
                 <ion-icon slot="start" color="secondary" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
                 <ion-label>{{ p.title }}</ion-label>
             </ion-item>
