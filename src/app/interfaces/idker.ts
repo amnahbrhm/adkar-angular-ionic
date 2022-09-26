@@ -8,5 +8,7 @@ export interface Idker {
 }
 export enum DkerType {
   morning = 'morning',
-  evening = 'evening'
+  evening = 'evening',
+  afterPrayers = 'afterPrayers',
+  sleep = 'sleep'
 }

@@ -25,7 +25,13 @@ export class AdkarComponent implements OnInit {
       } else if (params.type === DkerType.morning) {
         this.adkarType = DkerType.morning;
         this.title = 'أذكار الصباح';
-      } else {
+      } else if (params.type === DkerType.afterPrayers) {
+        this.adkarType = DkerType.afterPrayers;
+        this.title = 'أذكار مابعد الصلاة';
+      } else if (params.type === DkerType.sleep) {
+        this.adkarType = DkerType.sleep;
+        this.title = 'أذكار النوم';
+      }else {
         this.handleWrongNavigation();
       }
       this.adkarService.setCurrentAdkarType(this.adkarType);
