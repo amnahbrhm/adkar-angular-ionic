@@ -1,0 +1,16 @@
+<ion-item>
+    <ion-col size="9" class="ion-text-right">
+        <ion-label class="ion-text" color="success">{{dker.prefix}}</ion-label>
+        <ion-label class="ion-text-wrap">
+            {{dker.text}}
+        </ion-label>
+        <ion-label color="tertiary">
+            <h6> {{dker.suffix}}
+            </h6>
+        </ion-label>
+        <p class="info" *ngIf="dker.info">{{dker.info}}</p>
+    </ion-col>
+    <ion-col size="3" class="counter-section">
+        <app-counter-controller [id]="i" [count]="dker.count"></app-counter-controller>
+    </ion-col>
+</ion-item>

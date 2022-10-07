@@ -10,7 +10,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class CounterControllerComponent implements OnInit, OnDestroy {
   @Input() count: number;
-  @Input() id: number;
+  @Input() id!: number;
   counter = 0;
   subscribtion!: Subscription;
 
