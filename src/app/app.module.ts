@@ -12,8 +12,9 @@ import { CounterControllerComponent } from './components/adkar/counter-controlle
 import { AdkarComponent } from './components/adkar/adkar.component';
 import { FormsModule } from '@angular/forms';
 import { DkerViewComponent } from './components/dker-view/dker-view.component';
+import { CounterViewComponent } from './components/counter-view/counter-view.component';
 @NgModule({
-  declarations: [AppComponent,MenuComponent,CounterControllerComponent,AdkarComponent,DkerViewComponent],
+  declarations: [AppComponent,MenuComponent,CounterControllerComponent,AdkarComponent,DkerViewComponent,CounterViewComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

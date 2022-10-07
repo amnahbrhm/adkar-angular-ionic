@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AdkarComponent } from './components/adkar/adkar.component';
+import { CounterViewComponent } from './components/counter-view/counter-view.component';
 
 const routes: Routes = [
-  { path: '**', redirectTo: 'adkar?type=morning', pathMatch: 'full' },
-
   {
     path: 'adkar',
     component: AdkarComponent
   },
-
+  {
+    path: 'counter',
+    component: CounterViewComponent
+  },
+  { path: '**', redirectTo: 'adkar?type=morning', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -1,34 +1,9 @@
-.counter-section {
-    width: 100%;
-    height: 95%;
-}
-
-.counter-number {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.bg-secondary {
-    background-color: var(--ion-color-secondary);
-}
-
-.counter-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    width: 100%;
-}
-
-.counter-bottom ion-text {
-    font-size: xx-small;
-}
-
 .info {
     font-size: x-small;
     color: var(--ion-color-dark-shade);
+}
+
+.counter-section {
+    width: 100%;
+    height: 90%;
 }

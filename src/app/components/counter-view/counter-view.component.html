@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="secondary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">
+            العداد
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" [style]="">
+    <ion-row size="3">
+        <ion-col size="12">
+            <ion-label position="stacked">عدد التكرار</ion-label>
+            <ion-input type="number" placeholder="التكرار" [value]="counter" #number></ion-input>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12">
+            <ion-button expand="block" color="primary" fill="clear" shape="round" (click)="counterChange(number.value)">
+                تغيير
+            </ion-button>
+        </ion-col>
+    </ion-row>
+    <ion-row size="12" [style.height]="'80%'">
+        <ion-col class="counterCol">
+            <app-counter-controller [count]="counter" [id]="counter-1">
+            </app-counter-controller>
+        </ion-col>
+    </ion-row>
+</ion-content>

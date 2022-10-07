@@ -1,4 +1,4 @@
-<div [classList]="(counter===0)?'counter bg-secondary':'counter'">
+<ion-card [classList]="'counter'" [style.background-color]="(counter===0)?'var(--ion-color-secondary)':''">
     <ion-row size="10" class="counter-number" (click)="decrease()">
         <ion-text class="ion-text-center">
             {{counter}}
@@ -8,4 +8,4 @@
         <ion-icon (click)="resetAlertConfirm()" name="refresh-outline"></ion-icon>
         <ion-text>{{id+1}}</ion-text>
     </ion-row>
-</div>
+</ion-card>

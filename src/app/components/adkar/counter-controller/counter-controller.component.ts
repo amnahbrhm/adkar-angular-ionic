@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AdkarService } from 'src/app/services/adkar.service';
 import { AlertController } from '@ionic/angular';
@@ -8,7 +8,7 @@ import { AlertController } from '@ionic/angular';
   templateUrl: './counter-controller.component.html',
   styleUrls: ['./counter-controller.component.scss', '../adkar.component.scss'],
 })
-export class CounterControllerComponent implements OnInit, OnDestroy {
+export class CounterControllerComponent implements OnInit, OnDestroy, OnChanges {
   @Input() count: number;
   @Input() id!: number;
   counter = 0;
@@ -26,6 +26,9 @@ export class CounterControllerComponent implements OnInit, OnDestroy {
     if (this.counter > 0) {
       this.counter--;
     }
+  }
+  ngOnChanges() {
+    this.reset();
   }
   reset() {
     this.counter = this.count;
