@@ -9,23 +9,20 @@
     </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding" [style]="">
-    <ion-row size="3">
-        <ion-col size="12">
-            <ion-label position="stacked">عدد التكرار</ion-label>
-            <ion-input type="number" placeholder="التكرار" [value]="counter" #number></ion-input>
-        </ion-col>
-    </ion-row>
-    <ion-row>
-        <ion-col size="12">
-            <ion-button expand="block" color="primary" fill="clear" shape="round" (click)="counterChange(number.value)">
-                تغيير
-            </ion-button>
-        </ion-col>
-    </ion-row>
+   
+   
     <ion-row size="12" [style.height]="'80%'">
         <ion-col class="counterCol">
-            <app-counter-controller [count]="counter" [id]="counter-1">
-            </app-counter-controller>
+            <ion-card [classList]="'counter'" [style.background-color]="(counter===0)?'var(--ion-color-secondary)':''">
+                <ion-row size="10" class="counter-number" (click)="increase()">
+                    <ion-text class="ion-text-center">
+                        {{counter}}
+                    </ion-text>
+                </ion-row>
+                <ion-row class="counter-bottom">
+                    <ion-icon (click)="resetAlertConfirm()" name="refresh-outline"></ion-icon>
+                </ion-row>
+            </ion-card>
         </ion-col>
     </ion-row>
 </ion-content>
