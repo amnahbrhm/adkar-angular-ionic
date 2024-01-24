@@ -9,9 +9,12 @@ import { CounterControllerComponent } from '../adkar/counter-controller/counter-
 })
 export class DkerViewComponent implements OnInit {
   @Input() dker: Idker;
-  @Input() i: number;
+  @Input() i: string;
   @ViewChild(CounterControllerComponent) counterControllerComponent!: CounterControllerComponent
   constructor() {
+  }
+  getSavedCounters(){
+    this.counterControllerComponent.getCounter()
   }
   resetCounter(){
     this.counterControllerComponent.reset()
