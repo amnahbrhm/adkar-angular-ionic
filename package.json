@@ -1,11 +1,12 @@
 {
   "name": "adkar",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Marwa",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-local": "ng serve --host 0.0.0.0 --port 4200",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

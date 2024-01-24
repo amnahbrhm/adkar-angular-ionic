@@ -26,6 +26,8 @@ export class AdkarService {
     }
   }
   setCurrentAdkarType(type: DkerType) {
+    console.log(this.adker.length);
+    
     this.currentAdkarTypeChange.next(type);
   }
   getCurrentAdkarType(): DkerType {

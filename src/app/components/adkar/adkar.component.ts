@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DkerType, Idker } from 'src/app/interfaces/idker';
 import { AdkarService } from 'src/app/services/adkar.service';
+import { DkerViewComponent } from '../dker-view/dker-view.component';
 
 @Component({
   selector: 'app-adkar',
@@ -13,6 +14,8 @@ export class AdkarComponent implements OnInit {
   title = '';
   adkarType: DkerType;
   dkerList = '';
+  @ViewChildren(DkerViewComponent) dkerViewComponents!: QueryList<DkerViewComponent>
+
   constructor(private activateRoute: ActivatedRoute, private adkarService: AdkarService, private router: Router) {
     this.getAdkar();
   }
@@ -37,6 +40,11 @@ export class AdkarComponent implements OnInit {
       this.adkarService.setCurrentAdkarType(this.adkarType);
       this.adkar = this.adkarService.getAdkar(this.adkarType);
     });
+  }
+  resetCounters(){
+    this.dkerViewComponents.forEach(dkerView=>{
+      dkerView.resetCounter()
+    })
   }
   handleWrongNavigation() {
     this.adkarType = this.adkarService.getCurrentAdkarType();

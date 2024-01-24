@@ -6,6 +6,9 @@
         <ion-title class="ion-text-center">
             {{this.title}}
         </ion-title>
+        <ion-buttons slot="end" class="reset-icon">
+            <ion-icon slot="icon-only" (click)="resetCounters()" name="refresh-outline"></ion-icon>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">

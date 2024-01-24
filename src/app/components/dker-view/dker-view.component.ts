@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Idker } from 'src/app/interfaces/idker';
+import { CounterControllerComponent } from '../adkar/counter-controller/counter-controller.component';
 
 @Component({
   selector: 'app-dker-view',
@@ -9,9 +10,12 @@ import { Idker } from 'src/app/interfaces/idker';
 export class DkerViewComponent implements OnInit {
   @Input() dker: Idker;
   @Input() i: number;
+  @ViewChild(CounterControllerComponent) counterControllerComponent!: CounterControllerComponent
   constructor() {
   }
-
+  resetCounter(){
+    this.counterControllerComponent.reset()
+  }
   ngOnInit() { }
 
 }
