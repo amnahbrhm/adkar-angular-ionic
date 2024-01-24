@@ -11,7 +11,7 @@ import { DkerType } from 'src/app/interfaces/idker';
   templateUrl: './counter-controller.component.html',
   styleUrls: ['./counter-controller.component.scss', '../adkar.component.scss'],
 })
-export class CounterControllerComponent implements OnInit, OnDestroy,OnChanges {
+export class CounterControllerComponent implements OnInit, OnDestroy {
   @Input() count: number;
   @Input() id!: string;
   counterName = ""
@@ -30,9 +30,6 @@ export class CounterControllerComponent implements OnInit, OnDestroy,OnChanges {
       }
     });
 
-  }
-  ngOnChanges(changes: SimpleChanges): void {
-    // throw new Error('Method not implemented.');
   }
 
   ngOnInit() {
