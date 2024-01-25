@@ -1,7 +1,6 @@
 import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AdkarService } from 'src/app/services/adkar.service';
-// import { Colors } from 'src/app/helpers';
 import { AlertController } from '@ionic/angular';
 import { DkerType } from 'src/app/interfaces/idker';
 
@@ -19,11 +18,9 @@ export class CounterControllerComponent implements OnInit, OnDestroy {
   subscribtion!: Subscription;
   adkarType: DkerType
   constructor(private alertController: AlertController, private adkarService: AdkarService) {
-    console.log('\x1b[33mconstructor::: ', this.adkarType);
-    // this.adkarType = adkarService.getCurrentAdkarType()
+   
     this.subscribtion = this.adkarService.currentAdkarTypeChange.subscribe(() => {
       this.adkarType = adkarService.getCurrentAdkarType()
-      console.log('currentAdkarTypeChange::: ', this.adkarType);
       if (this.id) {
         this.counterName = 'count-' + this.adkarType + this.id
         this.getCounter();
@@ -33,7 +30,6 @@ export class CounterControllerComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    console.log('\x1b[34mngOnInit::: ');
     this.getCounter()
   }
   decrease() {
@@ -43,20 +39,16 @@ export class CounterControllerComponent implements OnInit, OnDestroy {
     }
   }
   getCounter() {
-    console.log('getCounter');
     
     this.counterName = 'count-' + this.adkarType + this.id
     const countStorage = localStorage.getItem(this.counterName)
-    console.log('this.id::: ', this.counterName);
     this.counter = (countStorage) ? +countStorage : this.count;
-    console.log('this.counter::: ', this.counter);
   }
   setCounter() {
 
     localStorage.setItem(this.counterName, (this.counter).toString())
   }
   reset() {
-    console.log('reset');
 
     this.counter = this.count;
     this.setCounter();

@@ -14,8 +14,9 @@ export class MenuComponent implements OnInit {
     { title: 'اذكار مابعد الصلاة', queryParams: { type: DkerType.afterPrayers }, icon: 'person' },
     { title: 'اذكار النوم', queryParams: { type: DkerType.sleep }, icon: 'bed' },
   ];
+  // I used this for icons here https://fonts.google.com/icons?icon.platform=web&icon.set=Material+Icons&icon.style=Rounded
   otherList = [
-    { title: 'العداد', url: 'counter', },
+    { title: 'العداد', url: 'counter', icon: 'touch_app' },
 
   ];
   constructor() { }

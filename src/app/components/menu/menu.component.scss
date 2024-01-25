@@ -49,6 +49,16 @@ ion-menu.md ion-item.selected {
     --background: rgba(var(--ion-color-primary-rgb), 0.14);
 }
 
+.material-icons{
+    color: var(--ion-color-secondary);
+    width :24px;
+    text-align: start;
+    font-size: 24px;
+}
+.otherLabels{
+    padding-right: 24px;
+
+}
 ion-menu.md ion-item.selected ion-icon {
     color: var(--ion-color-primary);
 }
