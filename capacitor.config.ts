@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.adkar',
-  appName: 'adkar',
+  appName: 'اذكار',
   webDir: 'www',
   bundledWebRuntime: false
 };
