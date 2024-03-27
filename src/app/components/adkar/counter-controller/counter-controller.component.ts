@@ -12,7 +12,7 @@ import { DkerType } from 'src/app/interfaces/idker';
 })
 export class CounterControllerComponent implements OnInit, OnDestroy {
   @Input() count: number;
-  @Input() id!: string;
+  @Input() id!: number;
   counterName = ""
   counter = 0;
   subscribtion!: Subscription;
